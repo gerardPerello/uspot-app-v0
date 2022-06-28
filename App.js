@@ -1,20 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Main from './src/components/Main';
 
 export default function App() {
+  console.log("Hola")
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    //Las vistas son lo que se usa para crear interfaz de usuario, lo mas parecido a nu div en html. Los textos no pueden ir sueltos,
+    //Tienen que ir dentro de un Text, si no se queja.
+    //La diferencia con un div es que tienen el flexbox incorporado por defecto.
+    //TextInput ==> INPUT
+    //Toyuchable.... TODO LOS BOTONES.
+      <Main/>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

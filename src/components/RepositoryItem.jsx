@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
         padding:5,
         color: theme.colors.white,
         backgroundColor: Platform.select({
+            //To change between platforms
             android: theme.colors.primary,
             ios: 'orange',
             default: 'purple'

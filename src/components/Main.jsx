@@ -1,11 +1,17 @@
 import React from "react";
-import { Text, View, Alert} from "react-native";
+import { Text, View, Alert, Platform} from "react-native";
 import { TouchableNativeFeedback } from "react-native";
 import ReposistoryList from "./RepositoryList";
-import AppBar from "./AppBar";
 import { Route, Routes} from "react-router-native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+const AppBar = Platform.select({
+  ios: () => require('./AppBar.jsx').default,
+  default: () => require('./AppBar.jsx').default
+})()
+//Tambien se pueden hacer diferentes versiones de AppBar. Lo que hay que hacer 
+//Es quitarle el .jsx a la importacion i diferenciar los ficheros como AppBar.ios.jsx
+//O por ejemplo AppBar.android.jsx
 
 const Stack = createNativeStackNavigator();
 
